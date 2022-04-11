@@ -14,7 +14,7 @@ const App = () => {
   // jsx
   return (
     <div className='App'>
-      <h1>Hello {2 + 2}</h1>
+      <Person />
     </div>
   )
 }
