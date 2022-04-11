@@ -3,7 +3,7 @@ import './App.css'
 const Person = () => {
   return (
     <>
-      <h1>Name: John</h1>
+      <h1>Name: Jane</h1>
       <h2>Last Name: Doe</h2>
       <h2>Age: 30</h2>
     </>
