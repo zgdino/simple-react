@@ -7,9 +7,15 @@ const App = () => {
 
   return (
     <div className='App'>
-      <button onClick={() => setCounter((prevCount) => prevCount - 1)}>-</button>
+      <button onClick={() => setCounter((prevCount) => prevCount - 1)}>
+        -
+      </button>
       <h1>{counter}</h1>
-      <button>+</button>
+      <button onClick={() => setCounter((prevCount) => prevCount + 1)}>
+        +
+      </button>
+
+      <button onMouseOver={() => setCounter((prevCount) => prevCount + 5)}>go over me</button>
     </div>
   )
 }
