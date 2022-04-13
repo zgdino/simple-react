@@ -1,23 +1,15 @@
 import './App.css'
-
-const Person = (props) => {
-  return (
-    <>
-      <h1>Name: {props.name}</h1>
-      <h2>Last Name: {props.lastName}</h2>
-      <h2>Age: 30</h2>
-    </>
-  )
-}
+import { useState } from 'react'
 
 const App = () => {
-  // jsx
+  // useState HOOK
+  const [counter, setCounter] = useState(0)
+
   return (
     <div className='App'>
-      <Person name={'John'} />
-      <Person lastName={'Doe'} />
-      <Person />
-      <Person />
+      <button>-</button>
+      <h1>{counter}</h1>
+      <button>+</button>
     </div>
   )
 }
