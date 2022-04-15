@@ -8,7 +8,7 @@ const App = () => {
   // if dependency array is empty → change only on the initial load
   useEffect(() => {
     alert('you have changed the counter to' + counter)
-  }, [counter])
+  }, [counter]);
 
   return (
     <div className='App'>
