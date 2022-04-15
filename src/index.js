@@ -1,8 +1,9 @@
 import React  from 'react'
 import ReactDOM from 'react-dom'
 
-// we will use external API
+//external API
 
 import App from './App'
 
+// injecting our App component into the root file
 ReactDOM.render(<App />, document.getElementById('root')) 
