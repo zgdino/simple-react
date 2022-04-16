@@ -14,13 +14,24 @@ const App = () => {
   }
 
   useEffect(() => {
-   searchMovies('spiderman')
+    searchMovies('spiderman')
   }, [])
 
   return (
-   <div className="app">
-    <h1>Movie Land</h1>
-   </div>
+    <div className='app'>
+      <h1>Movie Land</h1>
+      <div className='search'>
+        <input
+          placeholder='Search for movies'
+          value='Superman'
+          onChange={() => {}}
+        />
+        <img src={SearchIcon} alt="search" onClick={() => {}} />
+      </div>
+      <div className="container">
+       
+      </div>
+    </div>
   )
 }
 
