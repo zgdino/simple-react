@@ -41,9 +41,19 @@ const App = () => {
         />
         <img src={SearchIcon} alt='search' onClick={() => {}} />
       </div>
-      <div className='container'>
-        <MovieCard movie1={movies[0]}/>
-      </div>
+
+      {
+        movies?.length > 0
+        ? (
+          <div className='container'>
+            <MovieCard movie1={movie1}/>
+          </div>
+        ) : (
+          <div className="empty">
+            <h2>No movies found</h2>
+          </div>
+        )
+      }
     </div>
   )
 }
