@@ -1,4 +1,4 @@
-// whenever crating a new React component → jsx extension
+// whenever creating a new React component → jsx extension
 
 import React from 'react'
 
@@ -10,6 +10,7 @@ const MovieCard = ({ movie }) => {
       </div>
       <div>
         <img
+        // if no image in API, display placeholder
           src={
             movie.Poster !== 'N/A'
               ? movie.Poster
