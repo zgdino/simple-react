@@ -29,11 +29,12 @@ const App = () => {
           placeholder='Search for movies'
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
+          // automatic search without the need to press search icon
           onKeyUp={() => searchMovies(searchTerm)}
         />
         <img src={SearchIcon} alt='search' onClick={() => searchMovies(searchTerm)} />
       </div>
-
+      {/* if there are no movies display an empty div */}
       {movies?.length > 0 ? (
         <div className='container'>
           {movies.map((movie) => (
