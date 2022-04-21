@@ -25,6 +25,7 @@ const App = () => {
   }, [])
 
   return (
+    // landing page 
     <div className='app'>
       <h1>Movie Land</h1>
       <div className='search'>
@@ -36,6 +37,7 @@ const App = () => {
           onKeyUp={() => searchMovies(searchTerm)}
         />
         <img
+        // importing from search.svg on top
           src={SearchIcon}
           alt='search'
           onClick={() => searchMovies(searchTerm)}
