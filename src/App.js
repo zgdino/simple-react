@@ -4,9 +4,11 @@ import './App.css'
 import SearchIcon from './search.svg'
 import MovieCard from './MovieCard'
 
+// have to register witht he site to have an access to this API
 const API_URL = 'http://www.omdbapi.com?apikey=6333b19f'
 
 const App = () => {
+  // state hooks
   const [movies, setMovies] = useState([])
   const [searchTerm, setSearchTerm] = useState('')
 
@@ -17,6 +19,7 @@ const App = () => {
     setMovies(data.Search)
   }
 
+  // useEffect HOOK, empty dependency with superman as default on re-render
   useEffect(() => {
     searchMovies('spiderman')
   }, [])
@@ -32,7 +35,11 @@ const App = () => {
           // automatic search without the need to press search icon
           onKeyUp={() => searchMovies(searchTerm)}
         />
-        <img src={SearchIcon} alt='search' onClick={() => searchMovies(searchTerm)} />
+        <img
+          src={SearchIcon}
+          alt='search'
+          onClick={() => searchMovies(searchTerm)}
+        />
       </div>
       {/* if there are no movies display an empty div */}
       {movies?.length > 0 ? (
